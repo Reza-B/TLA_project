@@ -30,7 +30,6 @@ class TestModule1(unittest.TestCase):
             self.assertIsNotNone(fa)
 
             for address in addresses:
-                print(address)
                 state = fa.init_state
                 for char in address[0]:
                     state = state.transitions[char]
