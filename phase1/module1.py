@@ -3,68 +3,53 @@ from utils import utils
 from utils.utils import imageType
 from phase0.FA_class import DFA, State
 
-# def solve(image: imageType) -> 'DFA':
-#     ...
-def bit_addressing(image, x, y, size, prefix):
-    if size == 1:
-        return {prefix: image[x][y]}
-
-    half = size // 2
-    addresses = {}
-    addresses.update(bit_addressing(image, x, y, half, prefix + '0'))
-    addresses.update(bit_addressing(image, x, y + half, half, prefix + '1'))
-    addresses.update(bit_addressing(image, x + half, y, half, prefix + '2'))
-    addresses.update(bit_addressing(image, x + half, y + half, half, prefix + '3'))
-    return addresses
-
 def solve(image: imageType) -> 'DFA':
-    size = len(image)
-    addresses = bit_addressing(image, 0, 0, size, '')
-
-    # Initialize variables
+    # Initialization
     i = j = 0
-    states = {}
-    u = {}
-
-    # Create initial state and assign u_0
+    u = {0: image}
     dfa = DFA()
-    initial_state = dfa.add_state(id=0)
+    initial_state = dfa.add_state(0)
     dfa.assign_initial_state(initial_state)
-    states[0] = initial_state
-    u[0] = ''
+    state_dict = {0: initial_state}
 
     while i <= j:
-        current_state = states[i]
-        current_prefix = u[i]
-        for k in '0123':
-            new_prefix = current_prefix + k
-            found = False
-            for q in u:
-                if u[q] == new_prefix:
-                    dfa.add_transition(current_state, states[q], k)
-                    found = True
-                    break
-            if not found:
+        for k in range(4):
+            new_prefix = get_zoomed_part(u[i], k)
+            if new_prefix in u.values():
+                q = list(u.keys())[list(u.values()).index(new_prefix)]
+            else:
                 j += 1
-                new_state = dfa.add_state(id=j)
-                states[j] = new_state
                 u[j] = new_prefix
-                dfa.add_transition(current_state, new_state, k)
+                q = j
 
-        if i == j:
-            break
+            if str(k) not in state_dict[i].transitions:
+                new_state = state_dict.get(q, dfa.add_state(q))
+                state_dict[i].add_transition(str(k), new_state)
+                state_dict[q] = new_state
+
         i += 1
 
-    # Set final states based on addresses
-    for prefix, value in addresses.items():
-        for state_id, state_prefix in u.items():
-            if state_prefix == prefix:
-                if value == 1:
-                    dfa.add_final_state(states[state_id])
-                break
+    for state_id, image_part in u.items():
+        if is_final(image_part):
+            dfa.add_final_state(state_dict[state_id])
 
     return dfa
 
+
+def get_zoomed_part(image, part):
+    size = len(image) // 2
+    if part == 0:
+        return [row[:size] for row in image[:size]]
+    elif part == 1:
+        return [row[size:] for row in image[:size]]
+    elif part == 2:
+        return [row[:size] for row in image[size:]]
+    elif part == 3:
+        return [row[size:] for row in image[size:]]
+
+
+def is_final(image_part):
+    return all(pixel == 1 for row in image_part for pixel in row)
 
 if __name__ == "__main__":
     image = [[1, 1, 1, 1],
