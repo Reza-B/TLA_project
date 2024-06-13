@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12957b60-c5cd-4994-b2cd-695622be975d" name="Changes" comment="phase3">
+    <list default="true" id="12957b60-c5cd-4994-b2cd-695622be975d" name="Changes" comment="phase4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase4/module4.py" beforeDir="false" afterPath="$PROJECT_DIR$/phase4/module4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phase2/module2.py" beforeDir="false" afterPath="$PROJECT_DIR$/phase2/module2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.pytest in test_module1.py.executor": "Run",
-    "Python tests.pytest in test_module2.py.executor": "Run",
-    "Python tests.pytest in test_module3.py.executor": "Run",
-    "Python tests.pytest in test_module4.py.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/KUIX/Documents/GitHub/TLA_project",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest in test_module1.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_module2.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_module3.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_module4.py.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KUIX/Documents/GitHub/TLA_project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="pytest in test_module1.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TLA_project" />
@@ -109,7 +109,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718279448085</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="phase3">
+      <option name="closed" value="true" />
+      <created>1718280040004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718280040004</updated>
+    </task>
+    <task id="LOCAL-00003" summary="phase4">
+      <option name="closed" value="true" />
+      <created>1718280140672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718280140672</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +141,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="phase3" />
-    <option name="LAST_COMMIT_MESSAGE" value="phase3" />
+    <MESSAGE value="phase4" />
+    <option name="LAST_COMMIT_MESSAGE" value="phase4" />
   </component>
 </project>
