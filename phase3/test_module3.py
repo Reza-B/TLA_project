@@ -6,7 +6,8 @@ from utils import utils
 
 class TestModule3(unittest.TestCase):
     def test(self):
-        test_directory = "../data/module3Test"
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        test_directory = os.path.join(current_directory, '..', 'data', 'module3Test')
         image_files = [file for file in os.listdir(test_directory) if file.endswith((".jpg", ".png"))]
         json_files = [file for file in os.listdir(test_directory) if file.endswith(".json")]
 

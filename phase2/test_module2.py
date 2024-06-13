@@ -6,7 +6,8 @@ from utils import utils
 
 class TestModule2(unittest.TestCase):
     def test(self):
-        test_directory = "../data/module2Test"
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        test_directory = os.path.join(current_directory, '..', 'data', 'module2Test')
         image_files = [file for file in os.listdir(test_directory) if file.endswith((".jpg", ".png"))]
         image_files.sort()
 
@@ -20,6 +21,8 @@ class TestModule2(unittest.TestCase):
         binary_array = utils.convert_pictures_to_gray_scale_and_binary_array(image_path, 64)
 
         res = module2.solve(json_fa, binary_array)
+
+        print(res)
 
         self.assertEqual(res, True)
 
