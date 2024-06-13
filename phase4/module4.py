@@ -2,9 +2,29 @@ from math import log2
 from phase0.FA_class import DFA, State
 from utils.utils import imageType
 
-
 def solve(json_str: str, resolution: int) -> imageType:
-    ...
+    fa = DFA.deserialize_json(json_str)
+    image = [[0] * resolution for _ in range(resolution)]
+
+    def fill_image(state: State, x: int, y: int, size: int):
+        if size == 1:
+            image[y][x] = 1 if fa.is_final(state) else 0
+        else:
+            half_size = size // 2
+            for k in range(4):
+                if str(k) in state.transitions:
+                    next_state = state.transitions[str(k)]
+                    if k == 0:
+                        fill_image(next_state, x, y, half_size)
+                    elif k == 1:
+                        fill_image(next_state, x + half_size, y, half_size)
+                    elif k == 2:
+                        fill_image(next_state, x, y + half_size, half_size)
+                    elif k == 3:
+                        fill_image(next_state, x + half_size, y + half_size, half_size)
+
+    fill_image(fa.init_state, 0, 0, resolution)
+    return image
 
 
 if __name__ == "__main__":
@@ -16,4 +36,5 @@ if __name__ == "__main__":
         '"3": "q_4"}}',
         4
     )
-    print(pic_arr)
+    for row in pic_arr:
+        print(row)

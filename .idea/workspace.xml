@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12957b60-c5cd-4994-b2cd-695622be975d" name="Changes" comment="">
+    <list default="true" id="12957b60-c5cd-4994-b2cd-695622be975d" name="Changes" comment="phase3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase3/module3.py" beforeDir="false" afterPath="$PROJECT_DIR$/phase3/module3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phase4/module4.py" beforeDir="false" afterPath="$PROJECT_DIR$/phase4/module4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     "Python tests.pytest in test_module1.py.executor": "Run",
     "Python tests.pytest in test_module2.py.executor": "Run",
     "Python tests.pytest in test_module3.py.executor": "Run",
+    "Python tests.pytest in test_module4.py.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
@@ -100,6 +101,15 @@
       <option name="presentableId" value="Default" />
       <updated>1718230356294</updated>
     </task>
+    <task id="LOCAL-00001" summary="phase3">
+      <option name="closed" value="true" />
+      <created>1718279448085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718279448085</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,5 +122,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="phase3" />
+    <option name="LAST_COMMIT_MESSAGE" value="phase3" />
   </component>
 </project>
