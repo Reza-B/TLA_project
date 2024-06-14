@@ -60,8 +60,8 @@ def visualize(json_fa: str) -> None:
 
 
 if __name__ == "__main__":
-    visualize('{"states": ["q_0", "q_1", "q_2", "q_3", "q_4"], "initial_state": "q_0", "final_states": ["q_4"], '
-              '"alphabet": ["1", "2", "3", "4"], "q_0": {"1": "q_1", "2": "q_2", "3": "q_2", "4": "q_3"}, '
-              '"q_1": {"1": "q_4", "2": "q_4", "3": "q_3", "4": "q_3"}, "q_2": {"1": "q_4", "2": "q_4", "3": "q_4", '
-              '"4": "q_3"}, "q_3": {"1": "q_3", "2": "q_3", "3": "q_3", "4": "q_3"}, "q_4": {"1": "q_4", "2": "q_4", '
-              '"3": "q_4", "4": "q_4"}}')
+    file_path = r'..\data\module3Test\1.json'
+
+    with open(file_path, 'r') as file:
+        json_text = file.read()
+    visualize(str(json_text))
